@@ -9,7 +9,12 @@
 import UIKit
 import UserNotifications
 
-class NotificationCenterDelegate: NSObject {
+class NotificationCenterDelegate: NSObject, UNUserNotificationCenterDelegate {
+    
+    //With this notifications can appear in other or same view (all view controllers)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound])
+    }
    
     
     //MARK: - Support Methods

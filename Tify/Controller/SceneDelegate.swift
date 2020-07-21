@@ -7,17 +7,29 @@
 //
 
 import UIKit
+import UserNotifications
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    let ncDelegate = NotificationCenterDelegate()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        
+        //Keep in mind the .provisional to ask the user if he wants to keep reciving or not. pros good ux, cons: not dd
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+            self.printError(error, location: "Request Authorization")
+        }
+        
+        //With this notifications can appear in other or same view (all view controllers)
+        UNUserNotificationCenter.current().delegate = ncDelegate
+        
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,6 +59,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
+    
+    //MARK: - Support Methods
+         
+         // A function to print errors to the console
+         func printError(_ error:Error?,location:String){
+             if let error = error{
+                 print("Error: \(error.localizedDescription) in \(location)")
+             }
+         }
 
 
 }

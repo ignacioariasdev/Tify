@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,9 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
-            self.printError(error, location: "Request Authorization")
-        }
         
         return true
     }
@@ -39,14 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-     //MARK: - Support Methods
-       
-       // A function to print errors to the console
-       func printError(_ error:Error?,location:String){
-           if let error = error{
-               print("Error: \(error.localizedDescription) in \(location)")
-           }
-       }
+   
 
 
 }
