@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func schedulePlan(_ sender: Any) {
@@ -71,7 +72,7 @@ class ViewController: UIViewController {
             let content = self.notificationContent(title: "A timed plan step", body: "Making a plan!!")
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
             
-            let identifier = "message.scheduled"
+            let identifier = "message.workingOut"
             self.addNotification(trigger: trigger, content: content, identifier: identifier)
              }
           

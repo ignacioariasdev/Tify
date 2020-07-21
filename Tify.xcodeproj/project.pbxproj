@@ -14,6 +14,7 @@
 		A1663A0824C62E420065640A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1663A0724C62E420065640A /* Assets.xcassets */; };
 		A1663A0B24C62E420065640A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1663A0924C62E420065640A /* LaunchScreen.storyboard */; };
 		A1663A1624C63E1B0065640A /* NotificationCenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1663A1524C63E1B0065640A /* NotificationCenterDelegate.swift */; };
+		A1663A1824C7506F0065640A /* ManagerNotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1663A1724C7506F0065640A /* ManagerNotificationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A1663A0A24C62E420065640A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1663A0C24C62E420065640A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1663A1524C63E1B0065640A /* NotificationCenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterDelegate.swift; sourceTree = "<group>"; };
+		A1663A1724C7506F0065640A /* ManagerNotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerNotificationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				A1663A0024C62E400065640A /* SceneDelegate.swift */,
 				A1663A0224C62E400065640A /* ViewController.swift */,
 				A1663A1524C63E1B0065640A /* NotificationCenterDelegate.swift */,
+				A1663A1724C7506F0065640A /* ManagerNotificationVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1663A1824C7506F0065640A /* ManagerNotificationVC.swift in Sources */,
 				A1663A1624C63E1B0065640A /* NotificationCenterDelegate.swift in Sources */,
 				A1663A0324C62E400065640A /* ViewController.swift in Sources */,
 				A16639FF24C62E400065640A /* AppDelegate.swift in Sources */,

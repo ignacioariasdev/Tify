@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NaO-aL-oh1">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,19 +13,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps to burn fat faster the right way" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbG-GV-8QY">
-                                <rect key="frame" x="41" y="139" width="358" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps to burn fat faster the right way" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbG-GV-8QY">
+                                <rect key="frame" x="32" y="97" width="350" height="28"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCj-WC-fB6">
-                                <rect key="frame" x="52" y="230" width="164" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCj-WC-fB6">
+                                <rect key="frame" x="20" y="161" width="374" height="171"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="171" id="hOc-IQ-c0y"/>
+                                    <constraint firstAttribute="width" constant="374" id="wzG-H2-U2l"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="📅Schedule a plan">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -33,16 +37,13 @@
                                     <action selector="schedulePlan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="29r-pE-PBe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tify Company" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKo-nv-FU6">
-                                <rect key="frame" x="126" y="44" width="163" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzo-VN-jMF">
-                                <rect key="frame" x="57" y="351" width="130" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzo-VN-jMF">
+                                <rect key="frame" x="20" y="340" width="374" height="153"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Hdb-u7-eXD"/>
+                                    <constraint firstAttribute="height" constant="153" id="hld-dQ-eYO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="🥵Working out">
                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,14 +52,193 @@
                                     <action selector="workingOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DiA-nN-8mP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tify Company" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKo-nv-FU6">
+                                <rect key="frame" x="126" y="44" width="163" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFc-Bp-IWf">
+                                <rect key="frame" x="20" y="501" width="374" height="158"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="158" id="3Ne-T2-5S3"/>
+                                    <constraint firstAttribute="width" constant="374" id="pTK-Uc-b6q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="🔔Manage Notifications">
+                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JI1-2S-Rp7" kind="show" id="Qfb-Zr-lKi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.69731197048150328" blue="0.7012311551291619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wCj-WC-fB6" firstAttribute="top" secondItem="gbG-GV-8QY" secondAttribute="bottom" constant="36" id="4qZ-ZT-kUm"/>
+                            <constraint firstItem="lFc-Bp-IWf" firstAttribute="top" secondItem="Vzo-VN-jMF" secondAttribute="bottom" constant="8" id="7p4-am-nIz"/>
+                            <constraint firstItem="gbG-GV-8QY" firstAttribute="top" secondItem="iKo-nv-FU6" secondAttribute="bottom" constant="20" id="S1q-ho-9Yg"/>
+                            <constraint firstItem="Vzo-VN-jMF" firstAttribute="top" secondItem="wCj-WC-fB6" secondAttribute="bottom" constant="8" id="SC6-ZN-M43"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vzo-VN-jMF" secondAttribute="trailing" constant="20" id="V8i-ew-Bgt"/>
+                            <constraint firstItem="wCj-WC-fB6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VMs-S2-3uD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gbG-GV-8QY" secondAttribute="trailing" constant="32" id="ah5-0S-YsW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lFc-Bp-IWf" secondAttribute="trailing" constant="20" id="d3d-VT-6I6"/>
+                            <constraint firstItem="gbG-GV-8QY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="dWB-IP-3JK"/>
+                            <constraint firstItem="lFc-Bp-IWf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kzi-b8-b2x"/>
+                            <constraint firstItem="Vzo-VN-jMF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="szw-pY-41U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wCj-WC-fB6" secondAttribute="trailing" constant="20" id="t4e-OF-4Qw"/>
+                            <constraint firstItem="iKo-nv-FU6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="t6i-T2-gS7"/>
+                            <constraint firstItem="iKo-nv-FU6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vVX-8G-ztL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0y6-iI-sjv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="110"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="109.82142857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JPD-3D-k8V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NaO-aL-oh1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DoM-MU-Ajf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ole-Kj-Pta"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TMG-XH-Lzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </scene>
+        <!--Manage Notifications View Controller-->
+        <scene sceneID="Mfu-B2-Fha">
+            <objects>
+                <viewController id="JI1-2S-Rp7" customClass="ManageNotificationsViewController" customModule="Huli_Pizza_Notification" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Raw-xa-qDh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="959-Oz-Qt6">
+                                <rect key="frame" x="10" y="452.66666666666674" width="394" height="273.33333333333326"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUJ-fI-sDs">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="60.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                        <state key="normal" title="View Pending Notifications">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="viewPendingNotifications:" destination="JI1-2S-Rp7" eventType="touchUpInside" id="lOe-aB-ecV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTk-dm-0nW">
+                                        <rect key="frame" x="0.0" y="70.666666666666686" width="394" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                        <state key="normal" title="View Delivered Notifications">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="viewDeliveredNotifications:" destination="JI1-2S-Rp7" eventType="touchUpInside" id="hdd-je-J0s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWm-Hl-9Wf">
+                                        <rect key="frame" x="0.0" y="141.66666666666669" width="394" height="60.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                        <state key="normal" title="Next Plan Step">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextPizzaStep:" destination="JI1-2S-Rp7" eventType="touchUpInside" id="nhr-hH-ZGZ"/>
+                                            <action selector="nextPlanStep:" destination="JI1-2S-Rp7" eventType="touchUpInside" id="bFj-vH-vI7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ie5-qL-acO">
+                                        <rect key="frame" x="0.0" y="212.33333333333331" width="394" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                        <state key="normal" title="Remove Notification">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="removeNotification:" destination="JI1-2S-Rp7" eventType="touchUpInside" id="yeB-2V-QXg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Console" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6b7-Yp-GE7">
+                                <rect key="frame" x="10" y="108.00000000000003" width="394" height="334.66666666666674"/>
+                                <color key="backgroundColor" name="Honeydew"/>
+                                <gestureRecognizers/>
+                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Kku-Cl-CZR" appends="YES" id="wX6-Ys-bVp"/>
+                                </connections>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pyb-i8-duC">
+                                <rect key="frame" x="10" y="54" width="394" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2G-3J-Gal">
+                                        <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                        <state key="normal" title="&lt;&lt;">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButton:" destination="JI1-2S-Rp7" eventType="touchUpInside" id="w0O-bM-cOG"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tify Company" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8y-va-LBS">
+                                        <rect key="frame" x="194.66666666666663" y="0.0" width="199.33333333333337" height="44"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="28"/>
+                                        <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6b7-Yp-GE7" firstAttribute="height" secondItem="Raw-xa-qDh" secondAttribute="height" multiplier="5/11" id="3eq-4x-Lci"/>
+                            <constraint firstItem="pyb-i8-duC" firstAttribute="leading" secondItem="bMT-Se-skb" secondAttribute="leading" constant="10" id="7dX-ok-IJX"/>
+                            <constraint firstItem="6b7-Yp-GE7" firstAttribute="top" secondItem="pyb-i8-duC" secondAttribute="bottom" constant="10" id="ASG-wF-qI4"/>
+                            <constraint firstItem="bMT-Se-skb" firstAttribute="trailing" secondItem="959-Oz-Qt6" secondAttribute="trailing" constant="10" id="BMn-lk-Urp"/>
+                            <constraint firstItem="bMT-Se-skb" firstAttribute="trailing" secondItem="6b7-Yp-GE7" secondAttribute="trailing" constant="10" id="N7H-8e-d0T"/>
+                            <constraint firstItem="959-Oz-Qt6" firstAttribute="leading" secondItem="bMT-Se-skb" secondAttribute="leading" constant="10" id="OPC-r5-BrA"/>
+                            <constraint firstItem="bMT-Se-skb" firstAttribute="trailing" secondItem="pyb-i8-duC" secondAttribute="trailing" constant="10" id="TWH-HQ-HhZ"/>
+                            <constraint firstItem="959-Oz-Qt6" firstAttribute="top" secondItem="6b7-Yp-GE7" secondAttribute="bottom" constant="10" id="euC-PZ-IMc"/>
+                            <constraint firstItem="bMT-Se-skb" firstAttribute="bottom" secondItem="959-Oz-Qt6" secondAttribute="bottom" constant="10" id="gfq-N1-tWZ"/>
+                            <constraint firstItem="pyb-i8-duC" firstAttribute="top" secondItem="bMT-Se-skb" secondAttribute="top" constant="10" id="oKS-mb-F9g"/>
+                            <constraint firstItem="6b7-Yp-GE7" firstAttribute="leading" secondItem="bMT-Se-skb" secondAttribute="leading" constant="10" id="spt-Vz-8sH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bMT-Se-skb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zc5-Lc-wSr"/>
+                    <connections>
+                        <outlet property="consoleView" destination="6b7-Yp-GE7" id="hkZ-9i-m2V"/>
+                        <outlet property="pendingNotificationButton" destination="RUJ-fI-sDs" id="Za0-uq-xrO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s6d-rJ-kXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="Kku-Cl-CZR">
+                    <connections>
+                        <action selector="removeAllNotifications:" destination="JI1-2S-Rp7" id="QqI-92-6hj"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2314" y="110"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Honeydew">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
