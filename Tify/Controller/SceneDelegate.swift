@@ -23,11 +23,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //Red label .destructive (makes the user think twice before clicked
         let cancelAction = UNNotificationAction(identifier: "cancel", title: "Cancel Workout", options: [.destructive])
         
+        let textInputAction = UNTextInputNotificationAction(identifier: "text.input", title: "Comments", options: [], textInputButtonTitle: "Send", textInputPlaceholder: "Comments here please")
         
         //Categories
         
         //"actual actions array that will show up (in that order)"
-        let workoutStepsCategory = UNNotificationCategory(identifier: "workout.steps.category", actions: [nextStepAction, snoozeAction, cancelAction], intentIdentifiers: [], options: [])
+        let workoutStepsCategory = UNNotificationCategory(identifier: "workout.steps.category", actions: [nextStepAction, snoozeAction, textInputAction, cancelAction], intentIdentifiers: [], options: [])
         
         let snoozeStepsCategory = UNNotificationCategory(identifier: "snooze.steps.category", actions: [snoozeAction], intentIdentifiers: [], options: [])
         
