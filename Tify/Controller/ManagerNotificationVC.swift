@@ -109,10 +109,12 @@ class ManageNotificationsViewController: UIViewController{
             
             if newStepNumber == workoutSteps.count - 1 {
                 updatedContent.threadIdentifier = request.identifier
+                updatedContent.categoryIdentifier = "snooze.category"
             }
             
             updatedContent.body = workoutSteps[newStepNumber]
             updatedContent.userInfo["step"] = newStepNumber
+            
             
             return updatedContent
         }

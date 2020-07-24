@@ -40,6 +40,7 @@ class ViewController: UIViewController {
             content.title = "An Scheduled workout"
             content.body = "Time to make a workout"
             content.threadIdentifier = "scheduled"
+            content.categoryIdentifier = "snooze.category"
             //trigger
             var dateComponents = Calendar.current.dateComponents([.hour, .minute, .second], from: Date())
             dateComponents.second = dateComponents.second! + 15
@@ -74,10 +75,12 @@ class ViewController: UIViewController {
             let content = self.notificationContent(title: "A timed plan step", body: "Making a plan!!")
             self.workoutNumber += 1
             content.subtitle = "Workout #\(self.workoutNumber)"
+            content.categoryIdentifier = "workout.steps.category"
             content.threadIdentifier = "make.workout"
             
+            
             //Lowest for true is 60 seconds. False can be 10.
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 7, repeats: false)
 //            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
             
             let identifier = "message.workout.\(self.workoutNumber)"

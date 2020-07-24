@@ -83,8 +83,8 @@
 			children = (
 				A16639FE24C62E400065640A /* AppDelegate.swift */,
 				A1663A0024C62E400065640A /* SceneDelegate.swift */,
-				A1663A0224C62E400065640A /* ViewController.swift */,
 				A1663A1524C63E1B0065640A /* NotificationCenterDelegate.swift */,
+				A1663A0224C62E400065640A /* ViewController.swift */,
 				A1663A1724C7506F0065640A /* ManagerNotificationVC.swift */,
 			);
 			path = Controller;

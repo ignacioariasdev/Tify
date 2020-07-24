@@ -13,12 +13,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     let ncDelegate = NotificationCenterDelegate()
+    
+    func setCategories() {
+        
+        //Actions
+        let nextStepAction = UNNotificationAction(identifier: "next.step", title: "Next", options: [])
+        let snoozeAction = UNNotificationAction(identifier: "snooze", title: "Title", options: [])
+        
+        //Red label .destructive (makes the user think twice before clicked
+        let cancelAction = UNNotificationAction(identifier: "cancel", title: "Cancel Workout", options: [.destructive])
+        
+        
+        //Categories
+        
+        //"actual actions array that will show up (in that order)"
+        let workoutStepsCategory = UNNotificationCategory(identifier: "workout.steps.category", actions: [nextStepAction, snoozeAction, cancelAction], intentIdentifiers: [], options: [])
+        
+        let snoozeStepsCategory = UNNotificationCategory(identifier: "snooze.steps.category", actions: [snoozeAction], intentIdentifiers: [], options: [])
+        
+        UNUserNotificationCenter.current().setNotificationCategories([workoutStepsCategory, snoozeStepsCategory])
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
         
         
         //Keep in mind the .provisional to ask the user if he wants to keep reciving or not. pros good ux, cons: not dd
@@ -29,6 +50,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //With this notifications can appear in other or same view (all view controllers)
         UNUserNotificationCenter.current().delegate = ncDelegate
         
+        setCategories()
         
     }
 
