@@ -23,6 +23,19 @@ class NotificationCenterDelegate: NSObject, UNUserNotificationCenterDelegate {
         let request = response.notification.request
         let content = request.content.mutableCopy() as! UNMutableNotificationContent
         
+        if action == "text.action" {
+            let textResponse = response as! UNTextInputNotificationResponse
+            let newContent = request.content.mutableCopy() as! UNMutableNotificationContent
+            
+            newContent.subtitle = textResponse.userText
+            
+            let request = UNNotificationRequest(identifier: request.identifier, content: newContent, trigger: request.trigger)
+            
+            UNUserNotificationCenter.current().add(request) { (error) in
+                self.printError(error, location: "Text Input action")
+            }
+        }
+        
         if action == "cancel" {
             UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [request.identifier])
         }
