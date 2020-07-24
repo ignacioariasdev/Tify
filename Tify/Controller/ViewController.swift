@@ -74,7 +74,7 @@ class ViewController: UIViewController {
             let content = self.notificationContent(title: "A timed plan step", body: "Making a plan!!")
             self.workoutNumber += 1
             content.subtitle = "Workout #\(self.workoutNumber)"
-            
+            content.threadIdentifier = "make.workout"
             
             //Lowest for true is 60 seconds. False can be 10.
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)

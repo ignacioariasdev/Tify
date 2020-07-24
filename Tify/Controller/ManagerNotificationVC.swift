@@ -107,6 +107,10 @@ class ManageNotificationsViewController: UIViewController{
             
             if newStepNumber >= workoutSteps.count { return nil}
             
+            if newStepNumber == workoutSteps.count - 1 {
+                updatedContent.threadIdentifier = request.identifier
+            }
+            
             updatedContent.body = workoutSteps[newStepNumber]
             updatedContent.userInfo["step"] = newStepNumber
             
