@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 // a global constant
-let burnFatSteps = ["No salt", "No sugar", "No saturated fat", "stick to water"]
+let workoutSteps = ["Warmup", "stretch", "Legs", "core", "15 cardio"]
 
 class ViewController: UIViewController {
 
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
-    @IBAction func schedulePlan(_ sender: Any) {
+    @IBAction func scheduleWorkout(_ sender: Any) {
     
         UNUserNotificationCenter.current().getNotificationSettings { (settings) in
             
@@ -37,16 +37,17 @@ class ViewController: UIViewController {
 //            self.introNotification()
             //Content
             let content = UNMutableNotificationContent()
-            content.title = "An Scheduled Plan"
-            content.body = "Time to make a plan"
-            
+            content.title = "An Scheduled workout"
+            content.body = "Time to make a workout"
+            content.threadIdentifier = "scheduled"
             //trigger
             var dateComponents = Calendar.current.dateComponents([.hour, .minute, .second], from: Date())
             dateComponents.second = dateComponents.second! + 15
             
             let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
             
-            let identifier = "message.scheduled"
+            //Seconds = timeIntervalSinceReferenceDate
+            let identifier = "message.scheduled.\(Date().timeIntervalSinceReferenceDate)"
             self.addNotification(trigger: trigger, content: content, identifier: identifier)
             
         }
@@ -54,8 +55,9 @@ class ViewController: UIViewController {
     }
     
     
+    var workoutNumber = 0
     
-    @IBAction func workingOut(_ sender: Any) {
+    @IBAction func makeWorkout(_ sender: Any) {
         
         //Basic structure for permission checking
         UNUserNotificationCenter.current().getNotificationSettings { (settings) in
@@ -70,9 +72,15 @@ class ViewController: UIViewController {
                  }
 //                 self.introNotification()
             let content = self.notificationContent(title: "A timed plan step", body: "Making a plan!!")
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+            self.workoutNumber += 1
+            content.subtitle = "Workout #\(self.workoutNumber)"
             
-            let identifier = "message.workingOut"
+            
+            //Lowest for true is 60 seconds. False can be 10.
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+//            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+            
+            let identifier = "message.workout.\(self.workoutNumber)"
             self.addNotification(trigger: trigger, content: content, identifier: identifier)
              }
           
@@ -99,7 +107,7 @@ class ViewController: UIViewController {
         
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in
-            self.printError(error, location: "Add request for identifier: " + identifier)
+            self.printError(error, location: "Add request for identifier:" + identifier)
         }
         
     }

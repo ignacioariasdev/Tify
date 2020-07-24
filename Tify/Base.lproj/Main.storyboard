@@ -16,43 +16,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps to burn fat faster the right way" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbG-GV-8QY">
-                                <rect key="frame" x="32" y="97" width="350" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💪Workout notificator " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbG-GV-8QY">
+                                <rect key="frame" x="100.66666666666669" y="97" width="213" height="28"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCj-WC-fB6">
                                 <rect key="frame" x="20" y="161" width="374" height="171"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="171" id="hOc-IQ-c0y"/>
-                                    <constraint firstAttribute="width" constant="374" id="wzG-H2-U2l"/>
-                                </constraints>
+                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="📅Schedule a plan">
-                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="📅Schedule a workout">
+                                    <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="schedulePlan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="29r-pE-PBe"/>
+                                    <action selector="scheduleWorkout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G25-fa-yJW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzo-VN-jMF">
                                 <rect key="frame" x="20" y="340" width="374" height="153"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="Hdb-u7-eXD"/>
-                                    <constraint firstAttribute="height" constant="153" id="hld-dQ-eYO"/>
+                                    <constraint firstAttribute="height" constant="153" id="uIf-a0-Fb2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="🥵Working out">
+                                <state key="normal" title="🥵 Make a workout!">
                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="workingOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DiA-nN-8mP"/>
+                                    <action selector="makeWorkout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c4q-EF-8Tu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tify Company" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKo-nv-FU6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tify Company" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKo-nv-FU6">
                                 <rect key="frame" x="126" y="44" width="163" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -60,10 +55,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFc-Bp-IWf">
                                 <rect key="frame" x="20" y="501" width="374" height="158"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="158" id="3Ne-T2-5S3"/>
-                                    <constraint firstAttribute="width" constant="374" id="pTK-Uc-b6q"/>
+                                    <constraint firstAttribute="height" constant="158" id="LNT-4L-bPj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="🔔Manage Notifications">
@@ -74,22 +68,23 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.69731197048150328" blue="0.7012311551291619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wCj-WC-fB6" firstAttribute="top" secondItem="gbG-GV-8QY" secondAttribute="bottom" constant="36" id="4qZ-ZT-kUm"/>
-                            <constraint firstItem="lFc-Bp-IWf" firstAttribute="top" secondItem="Vzo-VN-jMF" secondAttribute="bottom" constant="8" id="7p4-am-nIz"/>
-                            <constraint firstItem="gbG-GV-8QY" firstAttribute="top" secondItem="iKo-nv-FU6" secondAttribute="bottom" constant="20" id="S1q-ho-9Yg"/>
-                            <constraint firstItem="Vzo-VN-jMF" firstAttribute="top" secondItem="wCj-WC-fB6" secondAttribute="bottom" constant="8" id="SC6-ZN-M43"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vzo-VN-jMF" secondAttribute="trailing" constant="20" id="V8i-ew-Bgt"/>
-                            <constraint firstItem="wCj-WC-fB6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VMs-S2-3uD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gbG-GV-8QY" secondAttribute="trailing" constant="32" id="ah5-0S-YsW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lFc-Bp-IWf" secondAttribute="trailing" constant="20" id="d3d-VT-6I6"/>
-                            <constraint firstItem="gbG-GV-8QY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="dWB-IP-3JK"/>
-                            <constraint firstItem="lFc-Bp-IWf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kzi-b8-b2x"/>
-                            <constraint firstItem="Vzo-VN-jMF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="szw-pY-41U"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wCj-WC-fB6" secondAttribute="trailing" constant="20" id="t4e-OF-4Qw"/>
-                            <constraint firstItem="iKo-nv-FU6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="t6i-T2-gS7"/>
-                            <constraint firstItem="iKo-nv-FU6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vVX-8G-ztL"/>
+                            <constraint firstItem="lFc-Bp-IWf" firstAttribute="top" secondItem="Vzo-VN-jMF" secondAttribute="bottom" constant="8" id="4AF-qe-cvd"/>
+                            <constraint firstItem="wCj-WC-fB6" firstAttribute="leading" secondItem="Vzo-VN-jMF" secondAttribute="leading" id="6KE-rI-6j8"/>
+                            <constraint firstItem="iKo-nv-FU6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="E4N-s4-oow"/>
+                            <constraint firstItem="wCj-WC-fB6" firstAttribute="top" secondItem="gbG-GV-8QY" secondAttribute="bottom" constant="36" id="Ie2-pl-30d"/>
+                            <constraint firstItem="wCj-WC-fB6" firstAttribute="trailing" secondItem="Vzo-VN-jMF" secondAttribute="trailing" id="Jqh-M0-YNz"/>
+                            <constraint firstItem="wCj-WC-fB6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="K8a-Kp-DCt"/>
+                            <constraint firstItem="gbG-GV-8QY" firstAttribute="top" secondItem="iKo-nv-FU6" secondAttribute="bottom" constant="20" id="Sgq-zC-duF"/>
+                            <constraint firstItem="Vzo-VN-jMF" firstAttribute="top" secondItem="wCj-WC-fB6" secondAttribute="bottom" constant="8" id="T91-YU-4HM"/>
+                            <constraint firstItem="Vzo-VN-jMF" firstAttribute="leading" secondItem="lFc-Bp-IWf" secondAttribute="leading" id="a6O-8m-T6A"/>
+                            <constraint firstItem="iKo-nv-FU6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="cdk-tM-rdS"/>
+                            <constraint firstItem="Vzo-VN-jMF" firstAttribute="trailing" secondItem="lFc-Bp-IWf" secondAttribute="trailing" id="mVp-HH-Vh4"/>
+                            <constraint firstItem="iKo-nv-FU6" firstAttribute="centerX" secondItem="gbG-GV-8QY" secondAttribute="centerX" id="nOd-lA-E0C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lFc-Bp-IWf" secondAttribute="bottom" constant="77" id="pOC-0H-Rmy"/>
+                            <constraint firstItem="gbG-GV-8QY" firstAttribute="centerX" secondItem="wCj-WC-fB6" secondAttribute="centerX" id="ulW-FA-J7f"/>
+                            <constraint firstItem="wCj-WC-fB6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vw4-jo-TpQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -120,7 +115,7 @@
         <!--Manage Notifications View Controller-->
         <scene sceneID="Mfu-B2-Fha">
             <objects>
-                <viewController id="JI1-2S-Rp7" customClass="ManageNotificationsViewController" customModule="Huli_Pizza_Notification" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JI1-2S-Rp7" customClass="ManageNotificationsViewController" customModule="Tify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Raw-xa-qDh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,7 +127,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="60.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                         <state key="normal" title="View Pending Notifications">
-                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="viewPendingNotifications:" destination="JI1-2S-Rp7" eventType="touchUpInside" id="lOe-aB-ecV"/>
@@ -142,7 +137,7 @@
                                         <rect key="frame" x="0.0" y="70.666666666666686" width="394" height="61"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                         <state key="normal" title="View Delivered Notifications">
-                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="viewDeliveredNotifications:" destination="JI1-2S-Rp7" eventType="touchUpInside" id="hdd-je-J0s"/>
@@ -152,10 +147,9 @@
                                         <rect key="frame" x="0.0" y="141.66666666666669" width="394" height="60.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                         <state key="normal" title="Next Plan Step">
-                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="nextPizzaStep:" destination="JI1-2S-Rp7" eventType="touchUpInside" id="nhr-hH-ZGZ"/>
                                             <action selector="nextPlanStep:" destination="JI1-2S-Rp7" eventType="touchUpInside" id="bFj-vH-vI7"/>
                                         </connections>
                                     </button>
@@ -163,7 +157,7 @@
                                         <rect key="frame" x="0.0" y="212.33333333333331" width="394" height="61"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                         <state key="normal" title="Remove Notification">
-                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="removeNotification:" destination="JI1-2S-Rp7" eventType="touchUpInside" id="yeB-2V-QXg"/>
@@ -176,7 +170,7 @@
                                 <color key="backgroundColor" name="Honeydew"/>
                                 <gestureRecognizers/>
                                 <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Kku-Cl-CZR" appends="YES" id="wX6-Ys-bVp"/>
@@ -189,7 +183,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="44"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
                                         <state key="normal" title="&lt;&lt;">
-                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="backButton:" destination="JI1-2S-Rp7" eventType="touchUpInside" id="w0O-bM-cOG"/>
@@ -198,13 +192,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tify Company" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8y-va-LBS">
                                         <rect key="frame" x="194.66666666666663" y="0.0" width="199.33333333333337" height="44"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="28"/>
-                                        <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6b7-Yp-GE7" firstAttribute="height" secondItem="Raw-xa-qDh" secondAttribute="height" multiplier="5/11" id="3eq-4x-Lci"/>
                             <constraint firstItem="pyb-i8-duC" firstAttribute="leading" secondItem="bMT-Se-skb" secondAttribute="leading" constant="10" id="7dX-ok-IJX"/>

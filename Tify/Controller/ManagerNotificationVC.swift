@@ -14,7 +14,7 @@ class ManageNotificationsViewController: UIViewController{
     @IBOutlet weak var pendingNotificationButton: UIButton!
     @IBOutlet weak var consoleView: UITextView!
     
-    let burnFatSteps = ["No salt", "No sugar", "No saturated fat", "stick to water"]
+//    let workoutSteps = ["Warmup", "stretch", "Legs", "core", "15 cardio"]
     
     
     @IBAction func backButton(_ sender: UIButton) {
@@ -30,26 +30,91 @@ class ManageNotificationsViewController: UIViewController{
             
             for request in requests {
                 
-                self.printConsoleView("\(request.identifier)\(request.content.body)\n\(request.content.title)")
+                self.printConsoleView("\(request.identifier):\(request.content.body)\n")
             }
         }
     }
     
     @IBAction func viewDeliveredNotifications(_ sender: UIButton) {
-       
+        
+        UNUserNotificationCenter.current().getDeliveredNotifications { (notifications) in
+            
+            self.printRequest(count: notifications.count, type: "Delivered")
+            
+            for notification in notifications {
+                
+                self.printConsoleView("\(notification.request.identifier):\(notification.request.content.body)\n")
+                
+            }
+        }
     }
     
     @IBAction func removeAllNotifications(_ sender: UITapGestureRecognizer) {
-       
+        
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        
     }
     
     @IBAction func removeNotification(_ sender: UIButton) {
+        
+        UNUserNotificationCenter.current().getPendingNotificationRequests { (requests) in
+            
+            if let request = requests.first(where: { (request) -> Bool in
+                request.trigger?.repeats == true
+            }) {
+                
+                UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [request.identifier])
+                
+            }
+            
+            
+            
+        }
         
     }
     
     @IBAction func nextPlanStep(_ sender: UIButton) {
         
+        UNUserNotificationCenter.current().getPendingNotificationRequests { (requests) in
+            
+            for request in requests {
+                if request.identifier.hasPrefix("message.workout") {
+                    
+                    guard let content = self.updatePlanContent(request: request) else {
+                        
+                        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [request.identifier])
+                        return
+                    }
+                    
+                    self.addNotification(trigger: request.trigger, content: content, identifier: request.identifier)
+                    
+                    return
+                }
+            }
+            
+        }
+        
     }
+    
+    
+    func updatePlanContent(request: UNNotificationRequest) -> UNMutableNotificationContent! {
+        
+        if let stepNumber = request.content.userInfo["step"] as? Int {
+            
+            let newStepNumber = (stepNumber + 1)
+            
+            let updatedContent = request.content.mutableCopy() as! UNMutableNotificationContent
+            
+            if newStepNumber >= workoutSteps.count { return nil}
+            
+            updatedContent.body = workoutSteps[newStepNumber]
+            updatedContent.userInfo["step"] = newStepNumber
+            
+            return updatedContent
+        }
+        return request.content as? UNMutableNotificationContent
+    }
+    
     
     //MARK: - Life Cycle
     override func viewDidLayoutSubviews() {
@@ -61,7 +126,7 @@ class ManageNotificationsViewController: UIViewController{
         // Do any additional setup after loading the view.
         
     }
-     //MARK: - Support Methods
+    //MARK: - Support Methods
     func printConsoleView(_ string:String){
         DispatchQueue.main.async {
             self.consoleView.text += string
