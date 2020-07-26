@@ -28,6 +28,7 @@
 		A1663A0C24C62E420065640A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1663A1524C63E1B0065640A /* NotificationCenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterDelegate.swift; sourceTree = "<group>"; };
 		A1663A1724C7506F0065640A /* ManagerNotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerNotificationVC.swift; sourceTree = "<group>"; };
+		A178FD7524CDC01300DA8FA0 /* Tify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tify.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		A16639FD24C62E400065640A /* Tify */ = {
 			isa = PBXGroup;
 			children = (
+				A178FD7524CDC01300DA8FA0 /* Tify.entitlements */,
 				A1663A1424C630B80065640A /* Model */,
 				A1663A1324C630AE0065640A /* Controller */,
 				A1663A1224C630A00065640A /* View */,
@@ -316,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tify/Tify.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N2TVY9NM7;
 				INFOPLIST_FILE = Tify/Info.plist;
@@ -334,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tify/Tify.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N2TVY9NM7;
 				INFOPLIST_FILE = Tify/Info.plist;
