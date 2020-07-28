@@ -41,9 +41,12 @@ class NotificationCenterDelegate: NSObject, UNUserNotificationCenterDelegate {
         }
         
         if action == "snooze" {
+            
+            let content = changeWorkoutNotifications(content: request.content)
+            
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
             
-            let request = UNNotificationRequest(identifier: request.identifier, content: request.content, trigger: trigger)
+            let request = UNNotificationRequest(identifier: request.identifier, content: content, trigger: trigger)
             
             UNUserNotificationCenter.current().add(request) { (error) in
                 self.printError(error, location: "Snooze Action")
@@ -69,6 +72,28 @@ class NotificationCenterDelegate: NSObject, UNUserNotificationCenterDelegate {
         completionHandler()
     }
    
+    func changeWorkoutNotifications(content oldContent: UNNotificationContent) -> UNMutableNotificationContent {
+        
+        let content = oldContent.mutableCopy() as! UNMutableNotificationContent
+        
+        let userInfo = content.userInfo as! [String: Any]
+        
+        if let orders = userInfo["order"] as? [String] {
+            
+            content.body = "You are going to love this:\n"
+            
+            for item in orders {
+                content.body += surferBullet + item + "\n"
+            }
+        }
+        return content
+    }
+    
+
+    
+    
+    
+    
     
     //MARK: - Support Methods
     let surferBullet = "🏄🏽‍♀️ "

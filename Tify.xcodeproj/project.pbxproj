@@ -15,7 +15,46 @@
 		A1663A0B24C62E420065640A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1663A0924C62E420065640A /* LaunchScreen.storyboard */; };
 		A1663A1624C63E1B0065640A /* NotificationCenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1663A1524C63E1B0065640A /* NotificationCenterDelegate.swift */; };
 		A1663A1824C7506F0065640A /* ManagerNotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1663A1724C7506F0065640A /* ManagerNotificationVC.swift */; };
+		A178FD7D24CE53E900DA8FA0 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178FD7C24CE53E900DA8FA0 /* NotificationService.swift */; };
+		A178FD8124CE53E900DA8FA0 /* WorkoutNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A178FD7A24CE53E900DA8FA0 /* WorkoutNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A178FD8D24CE570A00DA8FA0 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A178FD8C24CE570A00DA8FA0 /* UserNotifications.framework */; };
+		A178FD8F24CE570A00DA8FA0 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A178FD8E24CE570A00DA8FA0 /* UserNotificationsUI.framework */; };
+		A178FD9224CE570A00DA8FA0 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178FD9124CE570A00DA8FA0 /* NotificationViewController.swift */; };
+		A178FD9524CE570A00DA8FA0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A178FD9324CE570A00DA8FA0 /* MainInterface.storyboard */; };
+		A178FD9924CE570A00DA8FA0 /* WorkoutNotificationContentExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A178FD8A24CE570A00DA8FA0 /* WorkoutNotificationContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A178FD7F24CE53E900DA8FA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A16639F324C62E400065640A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A178FD7924CE53E900DA8FA0;
+			remoteInfo = WorkoutNotificationServiceExtension;
+		};
+		A178FD9724CE570A00DA8FA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A16639F324C62E400065640A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A178FD8924CE570A00DA8FA0;
+			remoteInfo = WorkoutNotificationContentExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A178FD8524CE53E900DA8FA0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A178FD8124CE53E900DA8FA0 /* WorkoutNotificationServiceExtension.appex in Embed App Extensions */,
+				A178FD9924CE570A00DA8FA0 /* WorkoutNotificationContentExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A16639FB24C62E400065640A /* Tify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +68,15 @@
 		A1663A1524C63E1B0065640A /* NotificationCenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterDelegate.swift; sourceTree = "<group>"; };
 		A1663A1724C7506F0065640A /* ManagerNotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerNotificationVC.swift; sourceTree = "<group>"; };
 		A178FD7524CDC01300DA8FA0 /* Tify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tify.entitlements; sourceTree = "<group>"; };
+		A178FD7A24CE53E900DA8FA0 /* WorkoutNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WorkoutNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A178FD7C24CE53E900DA8FA0 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		A178FD7E24CE53E900DA8FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A178FD8A24CE570A00DA8FA0 /* WorkoutNotificationContentExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WorkoutNotificationContentExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A178FD8C24CE570A00DA8FA0 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		A178FD8E24CE570A00DA8FA0 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		A178FD9124CE570A00DA8FA0 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		A178FD9424CE570A00DA8FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A178FD9624CE570A00DA8FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +87,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A178FD7724CE53E900DA8FA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A178FD8724CE570A00DA8FA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A178FD8F24CE570A00DA8FA0 /* UserNotificationsUI.framework in Frameworks */,
+				A178FD8D24CE570A00DA8FA0 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				A16639FD24C62E400065640A /* Tify */,
+				A178FD7B24CE53E900DA8FA0 /* WorkoutNotificationServiceExtension */,
+				A178FD9024CE570A00DA8FA0 /* WorkoutNotificationContentExtension */,
+				A178FD8B24CE570A00DA8FA0 /* Frameworks */,
 				A16639FC24C62E400065640A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				A16639FB24C62E400065640A /* Tify.app */,
+				A178FD7A24CE53E900DA8FA0 /* WorkoutNotificationServiceExtension.appex */,
+				A178FD8A24CE570A00DA8FA0 /* WorkoutNotificationContentExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +168,34 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A178FD7B24CE53E900DA8FA0 /* WorkoutNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A178FD7C24CE53E900DA8FA0 /* NotificationService.swift */,
+				A178FD7E24CE53E900DA8FA0 /* Info.plist */,
+			);
+			path = WorkoutNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		A178FD8B24CE570A00DA8FA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A178FD8C24CE570A00DA8FA0 /* UserNotifications.framework */,
+				A178FD8E24CE570A00DA8FA0 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A178FD9024CE570A00DA8FA0 /* WorkoutNotificationContentExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A178FD9124CE570A00DA8FA0 /* NotificationViewController.swift */,
+				A178FD9324CE570A00DA8FA0 /* MainInterface.storyboard */,
+				A178FD9624CE570A00DA8FA0 /* Info.plist */,
+			);
+			path = WorkoutNotificationContentExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,15 +206,52 @@
 				A16639F724C62E400065640A /* Sources */,
 				A16639F824C62E400065640A /* Frameworks */,
 				A16639F924C62E400065640A /* Resources */,
+				A178FD8524CE53E900DA8FA0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A178FD8024CE53E900DA8FA0 /* PBXTargetDependency */,
+				A178FD9824CE570A00DA8FA0 /* PBXTargetDependency */,
 			);
 			name = Tify;
 			productName = Tify;
 			productReference = A16639FB24C62E400065640A /* Tify.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A178FD7924CE53E900DA8FA0 /* WorkoutNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A178FD8224CE53E900DA8FA0 /* Build configuration list for PBXNativeTarget "WorkoutNotificationServiceExtension" */;
+			buildPhases = (
+				A178FD7624CE53E900DA8FA0 /* Sources */,
+				A178FD7724CE53E900DA8FA0 /* Frameworks */,
+				A178FD7824CE53E900DA8FA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorkoutNotificationServiceExtension;
+			productName = WorkoutNotificationServiceExtension;
+			productReference = A178FD7A24CE53E900DA8FA0 /* WorkoutNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A178FD8924CE570A00DA8FA0 /* WorkoutNotificationContentExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A178FD9A24CE570A00DA8FA0 /* Build configuration list for PBXNativeTarget "WorkoutNotificationContentExtension" */;
+			buildPhases = (
+				A178FD8624CE570A00DA8FA0 /* Sources */,
+				A178FD8724CE570A00DA8FA0 /* Frameworks */,
+				A178FD8824CE570A00DA8FA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorkoutNotificationContentExtension;
+			productName = WorkoutNotificationContentExtension;
+			productReference = A178FD8A24CE570A00DA8FA0 /* WorkoutNotificationContentExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -130,6 +264,12 @@
 				ORGANIZATIONNAME = "Ignacio Arias";
 				TargetAttributes = {
 					A16639FA24C62E400065640A = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					A178FD7924CE53E900DA8FA0 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					A178FD8924CE570A00DA8FA0 = {
 						CreatedOnToolsVersion = 11.6;
 					};
 				};
@@ -148,6 +288,8 @@
 			projectRoot = "";
 			targets = (
 				A16639FA24C62E400065640A /* Tify */,
+				A178FD7924CE53E900DA8FA0 /* WorkoutNotificationServiceExtension */,
+				A178FD8924CE570A00DA8FA0 /* WorkoutNotificationContentExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -160,6 +302,21 @@
 				A1663A0B24C62E420065640A /* LaunchScreen.storyboard in Resources */,
 				A1663A0824C62E420065640A /* Assets.xcassets in Resources */,
 				A1663A0624C62E400065640A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A178FD7824CE53E900DA8FA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A178FD8824CE570A00DA8FA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A178FD9524CE570A00DA8FA0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +335,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A178FD7624CE53E900DA8FA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A178FD7D24CE53E900DA8FA0 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A178FD8624CE570A00DA8FA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A178FD9224CE570A00DA8FA0 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A178FD8024CE53E900DA8FA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A178FD7924CE53E900DA8FA0 /* WorkoutNotificationServiceExtension */;
+			targetProxy = A178FD7F24CE53E900DA8FA0 /* PBXContainerItemProxy */;
+		};
+		A178FD9824CE570A00DA8FA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A178FD8924CE570A00DA8FA0 /* WorkoutNotificationContentExtension */;
+			targetProxy = A178FD9724CE570A00DA8FA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A1663A0424C62E400065640A /* Main.storyboard */ = {
@@ -195,6 +381,14 @@
 				A1663A0A24C62E420065640A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A178FD9324CE570A00DA8FA0 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A178FD9424CE570A00DA8FA0 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -317,6 +511,7 @@
 		A1663A1024C62E420065640A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Tify/Tify.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +531,7 @@
 		A1663A1124C62E420065640A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Tify/Tify.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -347,6 +543,82 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marlhex.Tify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A178FD8324CE53E900DA8FA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8N2TVY9NM7;
+				INFOPLIST_FILE = WorkoutNotificationServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marlhex.Tify.WorkoutNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A178FD8424CE53E900DA8FA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8N2TVY9NM7;
+				INFOPLIST_FILE = WorkoutNotificationServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marlhex.Tify.WorkoutNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A178FD9B24CE570A00DA8FA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8N2TVY9NM7;
+				INFOPLIST_FILE = WorkoutNotificationContentExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marlhex.Tify.WorkoutNotificationContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A178FD9C24CE570A00DA8FA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8N2TVY9NM7;
+				INFOPLIST_FILE = WorkoutNotificationContentExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marlhex.Tify.WorkoutNotificationContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -369,6 +641,24 @@
 			buildConfigurations = (
 				A1663A1024C62E420065640A /* Debug */,
 				A1663A1124C62E420065640A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A178FD8224CE53E900DA8FA0 /* Build configuration list for PBXNativeTarget "WorkoutNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A178FD8324CE53E900DA8FA0 /* Debug */,
+				A178FD8424CE53E900DA8FA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A178FD9A24CE570A00DA8FA0 /* Build configuration list for PBXNativeTarget "WorkoutNotificationContentExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A178FD9B24CE570A00DA8FA0 /* Debug */,
+				A178FD9C24CE570A00DA8FA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
