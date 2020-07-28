@@ -41,6 +41,34 @@ class ViewController: UIViewController {
             content.body = "Time to make a workout"
             content.threadIdentifier = "scheduled"
             content.categoryIdentifier = "snooze.category"
+            
+            
+            //This is the attachment to fast read that resource .GIF
+            let imageURL = URL(fileReferenceLiteralResourceName: "goku.gif")
+            
+            //Ctrl click on UNNotificationAttachment go to documentation to have a better reference on sizes & types
+            let attachment = try! UNNotificationAttachment(identifier: "animation.goku.gif", url: imageURL, options: nil)
+            
+            content.attachments = [attachment]
+            
+            
+            
+            //This is the attachment to fast read that resource .WAV or properly MP3
+//            let imageURL = URL(fileReferenceLiteralResourceName: "notification.wav")
+//
+//            let attachment = try! UNNotificationAttachment(identifier: "audio.Notification.wav", url: imageURL, options: nil)
+//
+//            content.attachments = [attachment]
+            
+            
+            
+            //This is the attachment to fast read that resource PNG
+//            let imageURL = URL(fileReferenceLiteralResourceName: "CircleTafies.png")
+//
+//            let attachment = try! UNNotificationAttachment(identifier: "image.CircleTafies.png", url: imageURL, options: nil)
+//
+//            content.attachments = [attachment]
+            
             //trigger
             var dateComponents = Calendar.current.dateComponents([.hour, .minute, .second], from: Date())
             dateComponents.second = dateComponents.second! + 15

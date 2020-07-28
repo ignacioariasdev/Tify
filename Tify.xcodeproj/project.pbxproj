@@ -22,6 +22,12 @@
 		A178FD9224CE570A00DA8FA0 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178FD9124CE570A00DA8FA0 /* NotificationViewController.swift */; };
 		A178FD9524CE570A00DA8FA0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A178FD9324CE570A00DA8FA0 /* MainInterface.storyboard */; };
 		A178FD9924CE570A00DA8FA0 /* WorkoutNotificationContentExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A178FD8A24CE570A00DA8FA0 /* WorkoutNotificationContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A1D43FD424D0BF8700E26651 /* CircleTafies.png in Resources */ = {isa = PBXBuildFile; fileRef = A1D43FD324D0BF8700E26651 /* CircleTafies.png */; };
+		A1D43FD524D0BF8700E26651 /* CircleTafies.png in Resources */ = {isa = PBXBuildFile; fileRef = A1D43FD324D0BF8700E26651 /* CircleTafies.png */; };
+		A1D43FD724D0C21700E26651 /* goku.gif in Resources */ = {isa = PBXBuildFile; fileRef = A1D43FD624D0C21700E26651 /* goku.gif */; };
+		A1D43FD824D0C21700E26651 /* goku.gif in Resources */ = {isa = PBXBuildFile; fileRef = A1D43FD624D0C21700E26651 /* goku.gif */; };
+		A1D43FDD24D0C2DA00E26651 /* notification.wav in Resources */ = {isa = PBXBuildFile; fileRef = A1D43FDC24D0C2D900E26651 /* notification.wav */; };
+		A1D43FDE24D0C2DA00E26651 /* notification.wav in Resources */ = {isa = PBXBuildFile; fileRef = A1D43FDC24D0C2D900E26651 /* notification.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +83,9 @@
 		A178FD9124CE570A00DA8FA0 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		A178FD9424CE570A00DA8FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		A178FD9624CE570A00DA8FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1D43FD324D0BF8700E26651 /* CircleTafies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CircleTafies.png; sourceTree = "<group>"; };
+		A1D43FD624D0C21700E26651 /* goku.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = goku.gif; sourceTree = "<group>"; };
+		A1D43FDC24D0C2D900E26651 /* notification.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = notification.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +139,7 @@
 		A16639FD24C62E400065640A /* Tify */ = {
 			isa = PBXGroup;
 			children = (
+				A1D43FD224D0BD1C00E26651 /* Media */,
 				A178FD7524CDC01300DA8FA0 /* Tify.entitlements */,
 				A1663A1424C630B80065640A /* Model */,
 				A1663A1324C630AE0065640A /* Controller */,
@@ -194,6 +204,16 @@
 				A178FD9624CE570A00DA8FA0 /* Info.plist */,
 			);
 			path = WorkoutNotificationContentExtension;
+			sourceTree = "<group>";
+		};
+		A1D43FD224D0BD1C00E26651 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				A1D43FDC24D0C2D900E26651 /* notification.wav */,
+				A1D43FD324D0BF8700E26651 /* CircleTafies.png */,
+				A1D43FD624D0C21700E26651 /* goku.gif */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,8 +319,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D43FD724D0C21700E26651 /* goku.gif in Resources */,
 				A1663A0B24C62E420065640A /* LaunchScreen.storyboard in Resources */,
 				A1663A0824C62E420065640A /* Assets.xcassets in Resources */,
+				A1D43FDD24D0C2DA00E26651 /* notification.wav in Resources */,
+				A1D43FD424D0BF8700E26651 /* CircleTafies.png in Resources */,
 				A1663A0624C62E400065640A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +339,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D43FD524D0BF8700E26651 /* CircleTafies.png in Resources */,
+				A1D43FD824D0C21700E26651 /* goku.gif in Resources */,
+				A1D43FDE24D0C2DA00E26651 /* notification.wav in Resources */,
 				A178FD9524CE570A00DA8FA0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
