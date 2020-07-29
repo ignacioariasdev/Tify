@@ -26,6 +26,16 @@ class NotificationService: UNNotificationServiceExtension {
                 
             case "snooze.category":
                 let newContent = changeWorkoutNotifications(content: request.content)
+                
+                //This is the attachment to fast read that resource .GIF
+//                  let imageURL = URL(fileReferenceLiteralResourceName: "goku.gif")
+//                  
+//                  //Ctrl click on UNNotificationAttachment go to documentation to have a better reference on sizes & types
+//                  let attachment = try! UNNotificationAttachment(identifier: "animation.goku.gif", url: imageURL, options: nil)
+//                  
+//                  newContent.attachments = [attachment]
+                
+                
                 newContent.title = newContent.title + "[Push]"
                 contentHandler(newContent)
             
@@ -63,10 +73,14 @@ class NotificationService: UNNotificationServiceExtension {
        //MARK: - Support Methods
        let surferBullet = "🏄🏽‍♀️ "
     
+    //Short time to get content IN
     override func serviceExtensionTimeWillExpire() {
         // Called just before the extension will be terminated by the system.
         // Use this as an opportunity to deliver your "best attempt" at modified content, otherwise the original push payload will be used.
         if let contentHandler = contentHandler, let bestAttemptContent =  bestAttemptContent {
+            contentHandler(bestAttemptContent)
+            
+            bestAttemptContent.title = bestAttemptContent.title + "[Late]"
             contentHandler(bestAttemptContent)
         }
     }

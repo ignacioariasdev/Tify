@@ -28,6 +28,8 @@
 		A1D43FD824D0C21700E26651 /* goku.gif in Resources */ = {isa = PBXBuildFile; fileRef = A1D43FD624D0C21700E26651 /* goku.gif */; };
 		A1D43FDD24D0C2DA00E26651 /* notification.wav in Resources */ = {isa = PBXBuildFile; fileRef = A1D43FDC24D0C2D900E26651 /* notification.wav */; };
 		A1D43FDE24D0C2DA00E26651 /* notification.wav in Resources */ = {isa = PBXBuildFile; fileRef = A1D43FDC24D0C2D900E26651 /* notification.wav */; };
+		A1D43FDF24D0C6CB00E26651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1663A0724C62E420065640A /* Assets.xcassets */; };
+		A1D43FE024D0C6CB00E26651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1663A0724C62E420065640A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -332,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D43FDF24D0C6CB00E26651 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +346,7 @@
 				A1D43FD824D0C21700E26651 /* goku.gif in Resources */,
 				A1D43FDE24D0C2DA00E26651 /* notification.wav in Resources */,
 				A178FD9524CE570A00DA8FA0 /* MainInterface.storyboard in Resources */,
+				A1D43FE024D0C6CB00E26651 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

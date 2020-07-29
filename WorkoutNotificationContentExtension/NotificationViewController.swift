@@ -88,6 +88,26 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         contentSubtitle.text = content.subtitle
         contentBody.text = content.body
         
+//        contentImageview.image = UIImage(named: "CircleTafies.png")
+        let URLString = "http://www.sliceofapppie.com/wp-content/uploads/2018/11/PizzaParm.jpg"
+        
+        if let url = URL(string: URLString) {
+            // to prevent a time out we need to do this in another thread
+            DispatchQueue.global().async {
+                [weak self] in
+                
+                if let data = try? Data(contentsOf: url) {
+                    if let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            self?.contentImageview.image = image
+                        }
+                    }
+                }
+                
+            }
+        }
+        
+        
         extensionContext?.notificationActions = [snoozeAction, likeAction]
     }
     

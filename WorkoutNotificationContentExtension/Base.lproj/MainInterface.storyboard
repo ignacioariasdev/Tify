@@ -19,36 +19,36 @@
                                 <rect key="frame" x="10" y="54" width="300" height="236"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;title&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1z-Fn-jlk">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="27.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="17.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="24"/>
                                         <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="USa-0i-q8v">
-                                        <rect key="frame" x="0.0" y="35.5" width="300" height="105.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleTafies.png" translatesAutoresizingMaskIntoConstraints="NO" id="USa-0i-q8v">
+                                        <rect key="frame" x="0.0" y="25.5" width="300" height="154"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;subtitle&gt;" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjN-Xg-Wxf">
-                                        <rect key="frame" x="0.0" y="149" width="300" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="187.5" width="300" height="13"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;body&gt;" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F03-h2-1ks">
-                                        <rect key="frame" x="0.0" y="177.5" width="300" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="208.5" width="300" height="12.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fGK-FN-yeM">
-                                        <rect key="frame" x="0.0" y="206" width="300" height="30"/>
+                                        <rect key="frame" x="0.0" y="229" width="300" height="7"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIq-xt-Y5u">
-                                                <rect key="frame" x="0.0" y="0.0" width="146" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="146" height="7"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Snooze"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWh-mf-YYl">
-                                                <rect key="frame" x="154" y="0.0" width="146" height="30"/>
+                                                <rect key="frame" x="154" y="0.0" width="146" height="7"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Like"/>
                                                 <connections>
@@ -85,4 +85,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CircleTafies.png" width="245.75999450683594" height="245.75999450683594"/>
+    </resources>
 </document>
